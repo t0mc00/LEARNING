@@ -1,0 +1,20 @@
+#INPUTS
+
+#ENGINE SIZE
+engine_size = float(input("Insert car engise size here in leters e.g. 1.3: "))
+#TOTAL MILES DRIVEN
+total_milage = float(input("Intsert total milage here e.g. 45.7: "))
+
+
+#PROCESSING
+
+if engine_size < 1.3: 
+    fuel_allowence = float(total_milage * 0.15)
+
+else:
+    fuel_allowence = float(total_milage * 0.23)
+
+
+#OUTPUT
+
+print(f"Your total fuel allownce is £{fuel_allowence:.2f}")
