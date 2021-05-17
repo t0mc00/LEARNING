@@ -1,0 +1,59 @@
+# Open wordlist as varible
+
+with open("word_list.txt") as f:
+    word_list = f.read().splitlines()
+
+
+import random
+
+# Select randome word
+
+randentery = random.randint(0, len(word_list)-1)
+gen_word = word_list[randentery]
+
+lives_left = 7
+
+staredword = "*" * len(gen_word)
+
+# print (staredword) # Check
+# print(gen_word) # Check
+
+# Insert correct letter
+
+def guess(letter, word, encoded):
+    found = False
+    if letter in word:
+        found = True
+        for i in range(0, len(word)):
+            if word[i] == letter:
+                encoded = encoded[0:i] + letter + encoded[i+1:len(encoded)]
+    return (found, encoded)
+
+# Set lives
+
+print("\nYou start with 7 lives")
+print(staredword)
+
+# Statements win/loose
+
+while(lives_left > 0):
+    guessed_letter = input("Please enter your next guess: ")[:1]
+
+    letter_found, staredword = guess(guessed_letter, gen_word, staredword)
+	
+    if not letter_found:
+        lives_left -= 1
+        if lives_left == 0:
+            print("\nyou lose")
+            print("\nThe word was: " + gen_word)
+            break
+        else:
+            print("\nYou have %d lives." % lives_left)
+            print(staredword)
+    else:
+        if "*" not in staredword:
+            print("\nCongratulations you win")
+            break
+        else:
+            print("\nYou still have %d lives." % lives_left)
+            print(staredword)
