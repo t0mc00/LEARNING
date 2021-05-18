@@ -1,0 +1,40 @@
+# INPUT
+
+# USERINPUT
+
+text = input("Insert text here: ")
+
+
+#PROCESS
+
+#make lower case
+text.lower()
+
+#remove spaces and specal charectors
+
+workingtext = ""
+
+for character in text:
+    if character.isalnum():
+        workingtext += character
+
+
+#make lower case
+original = workingtext.lower()
+#print(original)                  #compare check
+
+#reverse
+modified = workingtext.lower()[::-1]
+#print(modified)                  #compare check
+
+
+#OUTPUT
+
+if original == modified:
+  print("Palindrome!")
+
+else:
+  print("Not palindrome!")
+
+
+
