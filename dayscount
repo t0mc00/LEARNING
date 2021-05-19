@@ -1,0 +1,7 @@
+import datetime
+
+
+start_date = date(1986,25,2)
+end_date = date.today()
+days = end_date - start_date
+print(days)
