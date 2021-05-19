@@ -1,0 +1,40 @@
+
+#MODULES
+
+from math import ceil
+
+#CONSTANTS and INPUTS
+
+wall_height = float(input("Insert wall height in meters: "))
+
+wall_width =  float(input("Insert width height in meters: "))
+
+apposing_wall_width =  float(input("Insert apposing width height in meters: "))
+
+paint_cost = float(input("Cost of tin: "))
+
+meter_square_of_paint = float(input("How many meters squared will the tin cover: "))
+
+
+#PROCESSING
+
+wall_total_area = (wall_height * wall_width) * 2
+apposing_wall_area = (apposing_wall_width * wall_height) * 2
+total_area_to_cover = wall_total_area + apposing_wall_area
+print(f"Total area to cover {total_area_to_cover} meters squared")
+
+# Round up to next nearest whole tin - CEIL
+number_of_tins = ceil(total_area_to_cover / meter_square_of_paint)
+
+# Sanity Check
+# print(number_of_tins)
+
+# Total Cost of paint
+total_cost_of_paint = round(number_of_tins * paint_cost, 2)
+
+
+#OUTPUT
+
+print(f"You will need {number_of_tins} paint tins.")
+
+print(f"This will cost you: £{total_cost_of_paint}")
