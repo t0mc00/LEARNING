@@ -1,0 +1,6 @@
+evennumbers = [number for number in range (1,11) if number % 2 ==0]
+print(evennumbers)
+
+cats = ["dave","ron","frank"]
+cats2 = [cat for cat in cats if len(cat)<=4]
+print(cats2)
