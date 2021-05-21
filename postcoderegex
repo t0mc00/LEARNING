@@ -1,0 +1,26 @@
+#reg ex 
+import re
+
+
+#easy postocde
+
+regex = "([A-Z]{2})([0-9]{1,2}) {0,2}([0-9])([A-Z]{2})"
+
+
+#input
+
+postcode = input("Enter Postcode: ")
+
+#do a reg ex match
+
+matches = re.match(regex,postcode,flags=re.IGNORECASE)
+
+#if match
+
+if matches:
+  print("Valid PostCode")
+  #display 4 groups
+  for group in matches.groups():
+    print(group)
+else:
+  print("Invalid post code")
