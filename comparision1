@@ -1,0 +1,7 @@
+mydog = "Dog"
+second_animal = "Dog"
+
+if mydog == second_animal:
+  print("Both animals are the same")
+else:
+  print("The animals are not the same")
