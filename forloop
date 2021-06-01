@@ -1,0 +1,74 @@
+#list of forloops
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+
+for num in mylist:
+	print(num)
+
+
+#print hello 10 times
+
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+
+for num in mylist:
+	print("hello")
+
+
+ #print even numbers
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+
+for num in mylist:
+  #check for even
+  if num % 2 == 0:
+	  print(num)
+
+
+#print odd number with f string
+
+for num in mylist:
+  #check for even
+  if num % 2 == 0:
+	  print(num)
+  else:
+    print(f"Odd number: {num}")
+
+
+#all each number together
+
+list_sum = 0
+for num in mylist:
+  list_sum = list_sum + num
+
+print(list_sum)
+
+
+
+#for loop and string
+
+mystring = "Hello World"
+
+for letter in mystring:
+  print(letter)
+
+
+
+#or to make smaller:
+
+
+for char in "Hello World":
+  print(char)
+
+
+
+#tuple print each item of tuple
+tup = (1,2,3)
+
+for item in tup:
+  print(item)
+
+
+
+
+
